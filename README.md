@@ -1,178 +1,289 @@
-# AuraTask ⚡ Next-Gen AI-Powered Productivity Dashboard
+<div align="center">
 
-AuraTask is a production-grade, state-of-the-art SaaS Task Manager and productivity hub designed with a sleek dark glassmorphism aesthetic, fluid Framer Motion animations, comprehensive task boards, focus Pomodoro clocks, and automated AI workload analysis. 
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:7B2FBE,50:3B82F6,100:06B6D4&height=200&section=header&text=AURATASK&fontSize=72&fontColor=ffffff&fontAlignY=60&desc=FOCUS.%20PLAN.%20ACHIEVE.&descAlignY=80&descSize=18&animation=fadeIn&fontStyle=italic" />
 
-Built with the modern **MERN stack**, it provides industry-standard clean architecture, protected JWT credential systems, active task streak tracking, and customizable daily goals.
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=16&pause=2000&color=06B6D4&center=true&vCenter=true&width=650&height=40&lines=Advanced+SaaS+Productivity+Dashboard;Where+Focus+Meets+Flow+%E2%80%94+Your+Tasks%2C+Your+Aura.;Full-Stack+MERN+%7C+React+%2B+Node.js+%2B+MongoDB" alt="Tagline" />
+
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-7C3AED?style=for-the-badge&labelColor=0D0014)](https://auratask-productivity-app.vercel.app)
+[![Backend API](https://img.shields.io/badge/⚙️_Backend_API-Render-06B6D4?style=for-the-badge&labelColor=0D0014)](https://auratask-productivity-app.onrender.com/api/health)
+[![GitHub Repo](https://img.shields.io/badge/💻_GitHub-Source_Code-3B82F6?style=for-the-badge&labelColor=0D0014&logo=github)](https://github.com/Arpi-tect/auratask-productivity-app)
+[![MIT License](https://img.shields.io/badge/📄_License-MIT-A855F7?style=for-the-badge&labelColor=0D0014)](LICENSE)
+
+<br/>
+
+<img src="https://skillicons.dev/icons?i=react,nodejs,express,mongodb,vercel,vite,js,css&theme=dark&perline=8" alt="Tech Stack" />
+
+</div>
+
+<br/>
 
 ---
 
-## 🚀 Key Features
+## 🌌 What is AuraTask?
 
-* **Glassmorphic UI**: High-fidelity dark mode with neon gradients, blurred panels, and micro-interactions.
-* **Kanban & Detail Views**: Toggle instantly between interactive Kanban sprint boards and detailed checklists.
-* **Integrated Pomodoro Timer**: Dedicated Focus Timer with circular SVG progress, sound alarms (browser synthesised), and task association to log deep-focus points.
-* **Productivity Score & Streaks**: Automatic tracking of user activity streaks and gamified achievement badges (unlocked via Pomodoro counts and daily goal milestones).
-* **Automated AI Workload Advice**: Mock AI recommendation engine evaluating deadlines, priority stacks, and category volumes to generate daily focus timetables.
-* **Axios interceptors & Fallback Simulation**: Built-in recruiter-friendly "Demo Showcase Mode" fallback letting recruiters test 100% of features with one-click offline mocks if a live database isn't connected.
+**AuraTask** is a premium, full-stack **MERN SaaS productivity application** with a stunning glassmorphism dark UI. It combines smart task management, Pomodoro focus timers, and productivity analytics — all deployed live and production-ready.
+
+```
+🔐 JWT Auth  ·  📋 Task CRUD  ·  ⏱️ Pomodoro  ·  📊 Analytics  ·  🔍 Smart Filter  ·  📁 File Uploads
+```
+
+---
+
+## ✨ Features at a Glance
+
+| Feature | Description |
+|---|---|
+| 🔐 **Secure Authentication** | JWT-based signup & login with bcrypt password hashing |
+| 📋 **Task Management** | Full CRUD — create, update, delete, organize tasks |
+| 🎯 **Smart Priority System** | Color-coded priority labels with intelligent warnings |
+| ⏱️ **Pomodoro Timer** | Built-in 25/5 min focus-break cycle timer |
+| 📊 **Activity Analytics** | Visual productivity tracking over time |
+| 🔍 **Search & Filter** | Filter by category, status, and priority |
+| 💎 **Glassmorphism UI** | Stunning frosted-glass dark theme with gradient accents |
+| 📁 **File Attachments** | Upload and attach files to tasks via Multer |
+| 📱 **Fully Responsive** | Seamless on mobile, tablet, and desktop |
 
 ---
 
 ## 🛠️ Tech Stack
 
+<div align="center">
+
 ### Frontend
-* **Core**: React.js 18 + Vite (ESM)
-* **Styling**: Tailwind CSS + custom filters
-* **Animations**: Framer Motion 11
-* **Analytics**: Recharts
-* **Notifications**: React Hot Toast
-* **Icons**: Lucide React
+| Tech | Purpose |
+|------|---------|
+| ⚛️ React 18 | Component-based UI framework |
+| ⚡ Vite | Lightning-fast build tool & dev server |
+| 🎨 CSS / Glassmorphism | Dark-themed premium custom styling |
+| 🔗 Axios | HTTP client for API communication |
 
 ### Backend
-* **Runtime**: Node.js + Express.js
-* **Database**: MongoDB + Mongoose Schemas
-* **Security**: JWT tokens + bcryptjs encryption
-* **Attachments**: Multer local disk engines
+| Tech | Purpose |
+|------|---------|
+| 🟢 Node.js | Server-side JavaScript runtime |
+| 🚂 Express.js | Minimal web framework for REST APIs |
+| 🍃 MongoDB Atlas | Cloud NoSQL database |
+| 🦴 Mongoose | Elegant ODM for MongoDB schemas |
+| 🔑 JWT | Secure stateless authentication |
+| 🔒 bcryptjs | Password hashing |
+| 📤 Multer | Multipart file upload middleware |
+| 🌍 CORS | Cross-origin resource sharing |
+
+### Deployment
+| Service | Purpose |
+|---------|---------|
+| ▲ Vercel | Frontend hosting with CI/CD |
+| 🔵 Render | Backend API hosting |
+| 🍃 MongoDB Atlas | Production cloud database |
+| 🐙 GitHub | Version control & source of truth |
+
+</div>
 
 ---
 
-## 📂 Architecture Structure
+## 🗺️ Architecture Overview
 
 ```
-saas-task-manager/
- ├── backend/
- │    ├── config/          # DB connection
- │    ├── controllers/     # Authentication & Task aggregations
- │    ├── middleware/      # JWT gates & Multer engines
- │    ├── models/          # Mongoose database models
- │    ├── routes/          # REST endpoints
- │    ├── services/        # AI scheduler heuristics
- │    ├── uploads/         # Local attachment files storage
- │    └── server.js        # Entry port configuration
- ├── frontend/
- │    ├── src/
- │    │    ├── animations/  # Staggered Framer Motion configurations
- │    │    ├── components/  # Glass wrappers, Kanban, Pomodoros
- │    │    ├── context/     # Auth Context with Demo Mode
- │    │    ├── data/        # High-fidelity mock fallbacks
- │    │    ├── hooks/       # Task API operations dispatcher
- │    │    ├── layouts/     # Protected sidebar frame
- │    │    ├── pages/       # Dashboard, Kanban, Profile grids
- │    │    ├── services/    # Axios client configs
- │    │    └── styles/      # Glow gradients & scrollbar hacks
- │    └── index.html
- ├── .gitignore
- └── README.md
+┌─────────────────────────────────────────────────────────────┐
+│                        USER BROWSER                          │
+│                  React 18 + Vite  (Vercel)                   │
+└─────────────────────┬───────────────────────────────────────┘
+                      │  HTTPS / Axios API Calls
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│               BACKEND REST API  (Render)                     │
+│              Node.js + Express.js                            │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────────┐  │
+│  │  /auth   │  │  /tasks  │  │ /uploads │  │  /health   │  │
+│  │ register │  │  CRUD    │  │  Multer  │  │   status   │  │
+│  │  login   │  │ filtered │  │          │  │            │  │
+│  └──────────┘  └──────────┘  └──────────┘  └────────────┘  │
+│                    │  JWT Middleware                          │
+└────────────────────┼────────────────────────────────────────┘
+                     │  Mongoose ODM
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│               MongoDB Atlas  (Cloud)                         │
+│    Collections: users  |  tasks  |  uploads                  │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🌐 API Documentation
+## 📁 Project Structure
 
-### Authentication (`/api/auth`)
-* `POST /register` - Registers an SDE account. Returns token.
-* `POST /login` - Login. Calculates consecutive login streaks and unlocks badges. Returns token.
-* `GET /me` - Resolves token, refreshes streak states, returns profile metadata.
-* `PUT /profile` - Edits user name and custom daily task count goal.
-* `PUT /avatar` - Uploads avatar image via Multer.
-
-### Task Management (`/api/tasks`)
-* `GET /` - Fetches all tasks. Supports filters (`status`, `priority`, `category`), searches, and sorts.
-* `POST /` - Creates task with optional file uploads.
-* `PUT /:id` - Edits task, manages checklist subtasks, marks status completions.
-* `DELETE /:id` - Removes task.
-* `POST /:id/comments` - Adds discussion post thread inside task cards.
-* `POST /:id/pomodoro` - Logs completed Focus Timer session onto a task, awarding milestone badges.
-* `GET /analytics` - Aggregates data for Recharts area charts, category pie charts, and productivity scores.
-* `GET /ai-suggest` - Evaluates tasks to recommend focus objects and suggested daily schedules.
+```
+auratask-productivity-app/
+├── 🗂️ backend/
+│   ├── config/
+│   │   └── db.js              # MongoDB Atlas connection
+│   ├── controllers/           # Route business logic
+│   ├── middleware/
+│   │   └── auth.js            # JWT verification middleware
+│   ├── models/
+│   │   ├── User.js            # User schema (email, password hash)
+│   │   └── Task.js            # Task schema (title, priority, status)
+│   ├── routes/
+│   │   ├── authRoutes.js      # POST /api/auth/register & login
+│   │   └── taskRoutes.js      # GET/POST/PUT/DELETE /api/tasks
+│   ├── services/              # Reusable business logic helpers
+│   ├── uploads/               # Multer file storage directory
+│   ├── .env.example           # Sample environment variables
+│   └── server.js              # Express app entry point
+│
+├── 🎨 frontend/
+│   ├── src/
+│   │   ├── components/        # Reusable React UI components
+│   │   ├── pages/             # Full-page views (Login, Dashboard)
+│   │   └── main.jsx           # React app entry point
+│   ├── public/                # Static assets
+│   ├── index.html             # HTML shell
+│   └── vite.config.js         # Vite configuration
+│
+├── .gitignore
+└── README.md
+```
 
 ---
 
-## 💻 Local Setup & Installation
+## ⚡ Quick Start — Run Locally
 
-Follow these simple steps to launch AuraTask locally.
+### Prerequisites
+- Node.js v18+
+- A free [MongoDB Atlas](https://cloud.mongodb.com) account
 
-### Step 1: Clone the workspace repository files
-Ensure you have Node.js and MongoDB installed on your system.
+### 1️⃣ Clone
 
-### Step 2: Configure Environment Credentials
-Create a `.env` file under the `/backend` folder using `/backend/.env.example` as a guideline:
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/task_manager
-JWT_SECRET=your_ultra_secure_super_secret_jwt_key_here_12345
-JWT_EXPIRE=30d
+```bash
+git clone https://github.com/Arpi-tect/auratask-productivity-app.git
+cd auratask-productivity-app
 ```
 
-### Step 3: Launch the Backend Server
-Navigate to the `backend/` folder in your terminal:
+### 2️⃣ Backend Setup
+
 ```bash
 cd backend
 npm install
-npm run dev
 ```
-The server will bind and start listening on port `5000`.
 
-### Step 4: Launch the Frontend App
-Navigate to the `frontend/` folder in a new terminal window:
+Create `backend/.env`:
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+NODE_ENV=development
+JWT_SECRET=your_super_secret_key
+JWT_EXPIRE=30d
+```
+
 ```bash
-cd frontend
+npm run dev
+# ✅ Server running on http://localhost:5000
+```
+
+### 3️⃣ Frontend Setup
+
+```bash
+cd ../frontend
 npm install
-npm run dev
 ```
-Vite will boot and host the interactive application on `http://localhost:5173`. Open this URL in your web browser.
 
----
-
-## 🐙 Push to GitHub Instructions
-
-To upload this codebase to your own GitHub profile, run these commands in your workspace root:
+Create `frontend/.env`:
+```env
+VITE_API_URL=http://localhost:5000/api
+```
 
 ```bash
-# Initialize git
-git init
-
-# Add all files to staging
-git add .
-
-# Create initial commit
-git commit -m "feat: Boot AuraTask high-fidelity fullstack workspace"
-
-# Create a new repository on github.com, copy the URL, and link it:
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-
-# Select main branch and push
-git branch -M main
-git push -u origin main
+npm run dev
+# ✅ App running on http://localhost:5173
 ```
 
 ---
 
-## ☁️ Deployment Instructions
+## 🌐 Deployment Guide
 
-### 1. Backend deployment on Render
-1. Create a free account on [Render](https://render.com).
-2. Click **New** > **Web Service**.
-3. Link your GitHub repository.
-4. Set the following settings:
-   * **Name**: `auratask-backend`
-   * **Root Directory**: `backend`
-   * **Build Command**: `npm install`
-   * **Start Command**: `node server.js`
-5. Click **Advanced** and set the environment variables:
-   * `MONGO_URI` (Use a free MongoDB Atlas connection string)
-   * `JWT_SECRET` (Your private key signature)
-   * `JWT_EXPIRE` (e.g., `30d`)
-   * `NODE_ENV` (Set to `production`)
-6. Click **Deploy Web Service**. Render will spin up your API server.
+### Backend → Render
+1. Go to [render.com](https://render.com) → New Web Service
+2. Connect your GitHub repo
+3. Root Directory: `backend`
+4. Build Command: `npm install`
+5. Start Command: `node server.js`
+6. Add environment variables from your `.env`
 
-### 2. Frontend deployment on Vercel
-1. Create an account on [Vercel](https://vercel.com).
-2. Click **Add New** > **Project** and select your GitHub repository.
-3. Set the following settings:
-   * **Framework Preset**: `Vite`
-   * **Root Directory**: `frontend`
-   * **Build Command**: `npm run build`
-   * **Output Directory**: `dist`
-4. Click **Environment Variables** and add:
-   * `VITE_API_URL` (Set to your Render deployment URL, e.g., `https://auratask-backend.onrender.com/api`)
-5. Click **Deploy**. Vercel will build and host your glowing dashboard globally!
+### Frontend → Vercel
+1. Go to [vercel.com](https://vercel.com) → New Project
+2. Import your GitHub repo
+3. Root Directory: `frontend`
+4. Framework: **Vite**
+5. Build Command: `npm run build`
+6. Output Directory: `dist`
+7. Add: `VITE_API_URL=https://your-render-app.onrender.com/api`
+
+---
+
+## 🔗 API Reference
+
+### 🔐 Auth Endpoints
+| Method | Endpoint | Body | Description |
+|--------|----------|------|-------------|
+| `POST` | `/api/auth/register` | `{name, email, password}` | Register new user |
+| `POST` | `/api/auth/login` | `{email, password}` | Login, returns JWT |
+
+### 📋 Task Endpoints *(JWT Required)*
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/tasks` | Fetch all user tasks |
+| `POST` | `/api/tasks` | Create a new task |
+| `PUT` | `/api/tasks/:id` | Update task by ID |
+| `DELETE` | `/api/tasks/:id` | Delete task by ID |
+
+### 🟢 Health
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/health` | Returns API status & uptime |
+
+---
+
+## 🌐 Live Links
+
+<div align="center">
+
+| 🔗 Service | 🌍 URL |
+|-----------|--------|
+| 🎨 Frontend | [auratask-productivity-app.vercel.app](https://auratask-productivity-app.vercel.app) |
+| ⚙️ Backend API | [onrender.com/api/health](https://auratask-productivity-app.onrender.com/api/health) |
+| 🗄️ Database | MongoDB Atlas (Cloud) |
+| 💻 Source Code | [github.com/Arpi-tect](https://github.com/Arpi-tect/auratask-productivity-app) |
+
+</div>
+
+---
+
+## 👩‍💻 Author
+
+<div align="center">
+
+**Arpita** — Full-Stack Developer
+
+[![GitHub](https://img.shields.io/badge/GitHub-Arpi--tect-7C3AED?style=for-the-badge&logo=github&labelColor=0D0014)](https://github.com/Arpi-tect)
+
+</div>
+
+---
+
+## 📄 License
+
+```
+MIT License — Free for learning, portfolio, and educational use.
+```
+
+---
+
+<div align="center">
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:7C3AED,100:D946EF&height=120&section=footer&text=Made%20with%20%E2%9D%A4%EF%B8%8F%20by%20Arpita&fontSize=20&fontColor=ffffff&fontAlignY=65&animation=fadeIn" />
+
+[![Stars](https://img.shields.io/github/stars/Arpi-tect/auratask-productivity-app?style=social)](https://github.com/Arpi-tect/auratask-productivity-app/stargazers)
+
+</div>
