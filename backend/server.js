@@ -1,11 +1,13 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const express = require('express');
-const dotenv = require('dotenv');
+
 const cors = require('cors');
 const path = require('path');
 const connectDB = require('./config/db');
-
+console.log("MONGO_URI =", process.env.MONGO_URI);
 // Load env variables
-dotenv.config();
+
 
 // Connect to Database
 connectDB();

@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { Mail, Lock, User, UserPlus, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
+import Logo from '../components/Logo';
 
 const Register = () => {
   const { register, loading } = useAuth();
@@ -42,13 +43,7 @@ const Register = () => {
       >
         {/* Brand Header */}
         <div className="flex flex-col items-center justify-center mb-8">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 mb-3">
-            <Activity className="w-6 h-6 text-white" />
-          </div>
-          <h2 className="text-3xl font-extrabold font-display bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-100 to-indigo-300">
-            Create an Account
-          </h2>
-          <p className="text-gray-500 text-sm mt-1.5">Sign up to get your smart activity dashboard</p>
+          <Logo showText={true} className="w-16 h-16 mb-2" />
         </div>
 
         <GlassCard className="p-8 border border-white/5 bg-dark-900/60 shadow-2xl">

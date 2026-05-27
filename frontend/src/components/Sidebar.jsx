@@ -11,6 +11,7 @@ import {
   Activity
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './Logo';
 
 const Sidebar = ({ isOpen, onClose }) => {
   const menuItems = [
@@ -31,13 +32,8 @@ const Sidebar = ({ isOpen, onClose }) => {
       
       {/* Brand Header */}
       <div className="flex items-center justify-between mb-10 mt-2">
-        <NavLink to="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 via-indigo-600 to-purple-700 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-all">
-            <Activity className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-100 to-indigo-200">
-            AuraTask
-          </span>
+        <NavLink to="/" className="group">
+          <Logo showText={true} className="w-10 h-10" />
         </NavLink>
         
         <button
